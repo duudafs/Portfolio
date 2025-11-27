@@ -2,18 +2,22 @@
 import NavBar from '../components/NavBar.vue'
 </script>
 
+
 <template>
+  
+      <NavBar />
+   
+   <section class="home-section">
+    <div class="initial">
+      <h3 class="my-name">Hello! Maria Eduarda here</h3>
+      <h6 class="presentation">I'm Software Engineering student from Brazil</h6>
+    </div>
+  </section>
+
   <div class="container d-flex flex-column align-items-center justify-content-center p-4">
 
-    <div class="mb-4">
-      <NavBar />
-    </div>
-
-    <div class="searchg-input mb-3 d-flex justify-content-center">
-      <input type="text" class="form-control w-50" placeholder="search for my..." />
-    </div>
-
     <section class="projects d-flex justify-content-center w-100">
+      
       <div class="card">
         <img src="..." class="card-img-top" alt="..." />
         <div class="card-body">
@@ -54,5 +58,25 @@ import NavBar from '../components/NavBar.vue'
         0 0 13px rgba(255, 138, 220, 0.61),
         0 0 40px rgba(255, 208, 0, 0.603);
     }
+}
+
+.search-input{
+    border-radius: 25px;
+    width: 470px;
+    height: 40px;
+}
+.home-section {
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* tira se quiser a esquerda */
+  padding-top: 80px; /* espaço pra navbar */
+}
+
+.initial{
+  
 }
 </style>
