@@ -1,13 +1,29 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
+import { onMounted } from "vue";
+
+
+onMounted(() => {
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80 },
+      size: { value: 3 },
+      color: { value: "#e2bfcd" },
+      line_linked: { enable: true, color: "#e2bfcd" },
+      move: { speed: 2 }
+    }
+  })
+})
+
 </script>
 
 
 <template>
-  
+  <div id="particles-js"></div>
       <NavBar />
-   
+    
    <section class="home-section">
+   
     <div class="initial">
       <h3 class="my-name">Hello! Maria Eduarda here</h3>
       <h6 class="presentation">I'm Software Engineering student from Brazil</h6>
@@ -34,6 +50,7 @@ import NavBar from '../components/NavBar.vue'
 </template>
 
 <style scoped>
+
 .card{
     width: 470px;
     height: 200px;
@@ -68,15 +85,33 @@ import NavBar from '../components/NavBar.vue'
 .home-section {
   width: 100%;
   height: 100vh;
-  background-color: aqua;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; /* tira se quiser a esquerda */
   padding-top: 80px; /* espaço pra navbar */
+    background: transparent !important;
+
 }
 
 .initial{
-  
+  margin-top: -500px;
 }
+.my-name{
+  font-size: 35px;
+  margin-top: -10px;
+ font-family: "Silkscreen", sans-serif;
+ font-weight: 400;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: transparent;
+}
+
 </style>
