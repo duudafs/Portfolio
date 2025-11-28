@@ -2,14 +2,13 @@
 import NavBar from '../components/NavBar.vue'
 import { onMounted } from "vue";
 
-
 onMounted(() => {
   particlesJS('particles-js', {
     particles: {
-      number: { value: 80 },
+      number: { value: 20 },
       size: { value: 3 },
       color: { value: "#e2bfcd" },
-      line_linked: { enable: true, color: "#e2bfcd" },
+      line_linked: { enable: false },
       move: { speed: 2 }
     }
   })
@@ -57,6 +56,7 @@ onMounted(() => {
     transition: 2s;
     border: none;
     box-shadow: rgba(99, 99, 99, 0.07) 0px 1px 2px, rgba(99, 99, 99, 0.07) 0px 2px 4px, rgba(99, 99, 99, 0.07) 0px 4px 8px, rgba(99, 99, 99, 0.07) 0px 8px 16px, rgba(99, 99, 99, 0.07) 0px 16px 32px, rgba(99, 99, 99, 0.07) 0px 32px 64px;
+    z-index: 2;
 }
 
 .card:hover{

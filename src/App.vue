@@ -6,6 +6,7 @@ import Start from './views/Start.vue';
 
 <template>
   <div id="app">
+    
     <Start />
   </div>
 
